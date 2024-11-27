@@ -52,6 +52,52 @@ export default function data() {
         </MDBox>
       ),
     },
+    {
+      author: "John Michael",
+      Category: "man",
+      images: (
+        <MDBox ml={-1}>
+          <img src={test} alt="image description" style={{ width: "100px", height: "100px" }} />
+        </MDBox>
+      ),
+      price: "$50",
+      Discount: "10%",
+      text: "Girls pink blouse for girls",
+      Actions: (
+        <MDBox display="flex" justifyContent="center" alignItems="center">
+          <MDIconButton color="primary">
+            <EditIcon />
+          </MDIconButton>
+          <MDBox mx={1} />
+          <MDIconButton color="error">
+            <DeleteIcon />
+          </MDIconButton>
+        </MDBox>
+      ),
+    },
+    {
+      author: "John Michael",
+      Category: "man",
+      images: (
+        <MDBox ml={-1}>
+          <img src={test} alt="image description" style={{ width: "100px", height: "100px" }} />
+        </MDBox>
+      ),
+      price: "$50",
+      Discount: "10%",
+      text: "Girls pink blouse for girls",
+      Actions: (
+        <MDBox display="flex" justifyContent="center" alignItems="center">
+          <MDIconButton color="primary">
+            <EditIcon />
+          </MDIconButton>
+          <MDBox mx={1} />
+          <MDIconButton color="error">
+            <DeleteIcon />
+          </MDIconButton>
+        </MDBox>
+      ),
+    },
     // Add other products here...
   ]);
   return {

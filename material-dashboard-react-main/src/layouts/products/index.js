@@ -26,10 +26,9 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import Dataproduct from "examples/products/Dataproduct";
-
+import NewProducts from "./data/adding";
 // Data
 import authorsTableData from "layouts/products/data/authorsTableData";
-import projectsTableData from "layouts/products/data/projectsTableData";
 
 function Porducts() {
   const { columns = [], rows = [] } = authorsTableData();
@@ -38,41 +37,44 @@ function Porducts() {
   console.log("Rows: ", rows); // التحقق من الصفوف
 
   return (
-    <DashboardLayout>
-      <DashboardNavbar />
-      <MDBox pt={6} pb={3}>
-        <Grid container spacing={6}>
-          <Grid item xs={12}>
-            <Card>
-              <MDBox
-                mx={2}
-                mt={-3}
-                py={3}
-                px={2}
-                variant="gradient"
-                bgColor="info"
-                borderRadius="lg"
-                coloredShadow="info"
-              >
-                <MDTypography variant="h6" color="white">
-                  Products Table
-                </MDTypography>
-              </MDBox>
-              <MDBox pt={3}>
-                <Dataproduct
-                  table={{ columns, rows }}
-                  isSorted={false}
-                  entriesPerPage={false}
-                  showTotalEntries={false}
-                  noEndBorder
-                />
-              </MDBox>
-            </Card>
+    <div>
+      <DashboardLayout>
+        <DashboardNavbar />
+        <MDBox pt={6} pb={3}>
+          <Grid container spacing={6}>
+            <Grid item xs={12}>
+              <Card>
+                <MDBox
+                  mx={2}
+                  mt={-3}
+                  py={3}
+                  px={2}
+                  variant="gradient"
+                  bgColor="info"
+                  borderRadius="lg"
+                  coloredShadow="info"
+                >
+                  <MDTypography variant="h6" color="white">
+                    Products Table
+                  </MDTypography>
+                </MDBox>
+                <MDBox pt={3}>
+                  <Dataproduct
+                    table={{ columns, rows }}
+                    isSorted={false}
+                    entriesPerPage={false}
+                    showTotalEntries={false}
+                    noEndBorder
+                  />
+                </MDBox>
+                <NewProducts />
+              </Card>
+            </Grid>
           </Grid>
-        </Grid>
-      </MDBox>
-      <Footer />
-    </DashboardLayout>
+        </MDBox>
+        <Footer />
+      </DashboardLayout>
+    </div>
   );
 }
 export default Porducts;

@@ -50,6 +50,7 @@ import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
+import NewProducts from "layouts/products/data/adding";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
@@ -71,6 +72,7 @@ const routes = [
     route: "/products",
     component: <Porducts />,
   },
+
   {
     type: "collapse",
     name: "RTL",
@@ -111,6 +113,7 @@ const routes = [
     route: "/authentication/sign-in",
     component: <SignIn />,
   },
+
   {
     type: "collapse",
     name: "Sign Up",
